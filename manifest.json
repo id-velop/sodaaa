@@ -1,0 +1,27 @@
+{
+  "name": "Shopee Open Design Agent",
+  "id": "1541700697487049785",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "permissions": [
+    "teamlibrary",
+    "currentuser"
+  ],
+  "capabilities": [],
+  "enableProposedApi": false,
+  "enablePrivatePluginApi": true,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "figma"
+  ],
+  "networkAccess": {
+    "allowedDomains": ["none"],
+    "devAllowedDomains": [
+      "http://localhost:3001",
+      "https://localhost:3001",
+      "http://localhost/v1"
+    ],
+    "reasoning": "Development access to local backend API server for Smart API integration and UI generation functionality"
+  }
+}

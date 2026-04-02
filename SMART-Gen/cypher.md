@@ -1,0 +1,12 @@
+CREATE (Fulltable:Component {`Definition（RAG）`: "表格", `Best Practic（RAG）`: "怎么用最好", `Keywords（RAG）`: "全能表格", `name  `: "Space / Fulltable", `Variants  `: "各种变体", `Constraints  `: "约束条件"})<-[:_RELATED]-(`Library （UI kit）`)-[:_RELATED]->(queryfilter:`biz-component ` {`Definition（RAG）`: "过滤", `Best Practic（RAG）`: "怎么用最好", `Keywords（RAG）`: "过滤", `Slot  `: "内部的结构构成", `name  `: "queryfilter", `Variants  `: "各种变体", `Constraints  `: "约束条件", `顺序`: 2})<-[:USES]-(Slot:Slot {`name  `: "queryfilter", `顺序`: 2, note: "视觉规则 Figma用"})<-[:INCLUDES]-(GenericListView:Pages {`Definition（RAG）`: "查询表单", `Use case（RAG）`: "场景123", `Keywords（RAG）`: "表单", `name  `: "GenericListView", `Constraints  `: "约束条件"})<-[:CONSTRAINS]-(Foundation)<-[:USES]-(GenericListView)-[:USES]->(`Frame `:Layout {`SlotType  `: "", `Variants  `: "", `Keywords（RAG）`: "", `VariantDimensions  `: "", `VisualRules  `: "", `Constraints  `: "", Keywords: ""})<-[:CONSTRAINS]-(Foundation)-[:INCLUDES]->(),
+()<-[:INCLUDES]-(Foundation)-[:INCLUDES]->(),
+(SlotN {`name  `: "Space / Fulltable", `顺序`: 3, note: "视觉规则 Figma用"})<-[:CONSTRAINS]-(VisualRule {`padding  `: "各种间距", bg: "F5F5F5"})-[:CONSTRAINS]->(Slot)-[:USES ]->(Content:SlotType)<-[:USES ]-(SlotN)<-[:CONSTRAINS]-(Foundation)-[:INCLUDES]->(),
+(queryfilter)-[:MAPS_TO]->(),
+(Foundation)-[:CONSTRAINS]->(n33:Slot {`name  `: "Space / PageHeader", `顺序`: 1, note: "视觉规则 Figma用"})-[:USES ]->(n24:`biz-component ` {`Definition（RAG）`: "指向", `Best Practic（RAG）`: "内容不要太多", `Keywords（RAG）`: "页头", `name  `: " PageHeader", `Variants  `: "各种变体", `Constraints  `: "约束条件"})-[:MAPS_TO]->(),
+(SlotN)-[:USES ]->(Fulltable)-[:MAPS_TO]->(:``),
+(:SlotType)<-[:INCLUDES]-(`Frame `)-[:INCLUDES]->(:SlotType),
+(VisualRule)<-[:USES]-(GenericListView)<-[:CONSTRAINS]-(VisualRule)<-[:USES]-(`Frame `)-[:INCLUDES]->(Content)<-[:USES ]-(n33)<-[:CONSTRAINS]-(VisualRule),
+(:Variant)<-[:INCLUDES]-(`Frame `)-[:INCLUDES]->(:Variant)<-[:USES]-(GenericListView),
+(SlotN)<-[:INCLUDES]-(GenericListView)-[:INCLUDES]->(n33),
+(Foundation)-[:CONSTRAINS]->(Slot),
+(`Library （UI kit）`)-[:_RELATED]->(n24)
